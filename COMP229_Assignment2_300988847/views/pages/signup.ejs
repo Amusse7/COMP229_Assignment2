@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/header'); %>
+    </header>
+    <main id="main">
+        <form id="login-form" method="POST">
+            <h1>Signup</h1>
+            <div>
+                <input class="textbox" type="text" placeholder="Username" name="username"/>
+            </div>
+            <div>
+                <input class="textbox" type="password" placeholder="Password" name="password"/>
+            </div>
+            <div>
+                <input class="textbox" type="password" placeholder="Confirm Password" name="cpassword"/>
+            </div>
+            <div class="submission">
+                <button class="button" type="submit">Create Account</button>
+                <p><%= submitRes %></p>
+            </div>
+            <a href="/login">Already have an account? Sign in!</a>
+        </form>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

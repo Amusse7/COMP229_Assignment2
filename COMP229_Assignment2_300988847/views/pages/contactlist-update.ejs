@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/header'); %>
+    </header>
+    <main id="main" class="center-con">
+        <h1>Update Contact</h1>
+
+        <form action="/contact-update/<%= contact._id %>" method="POST">
+            <div>
+                <input class="textbox" type="text" placeholder="Name" name="name" value="<%= contact.name %>"/>
+            </div>
+            <div>
+                <input class="textbox" type="text" placeholder="Email" name="email" value="<%= contact.email %>"/>
+            </div>
+            <div>
+                <input class="textbox" type="text" placeholder="Phone" name="phone" value="<%= contact.phone %>"/>
+            </div>
+            <div class="submission">
+                <button class="button" type="submit">Update Contact</button>
+            </div>
+        </form>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+    <body>
+    <header id="header">
+        <%- include('../partials/header'); %>
+    </header>
+    <main id="main">
+        <div id="contact-list" class="center-con">
+            <div class="top">
+                <h1>Business Contacts</h1>
+                <a href="/add-contact" class="button">Add Contact</a>
+            </div>
+            <table id="contacts">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                
+                <% for (var i = 0; i < contacts.length;  i++) { %>
+                    <tr>
+                        <td><%= contacts[i].name %></td>
+                        <td><%= contacts[i].email %></td>
+                        <td><%= contacts[i].phone %></td>
+                        <td><a class="action-btn" href="/contact/<%= contacts[i]._id %>">Edit</a></td>
+                        <td><form action="/contact-delete/<%= contacts[i]._id %>" method="POST" enctype="application/x-www-form-urlencoded"><button class="action-btn" type="submit">Delete</button></form></td>
+                    </tr>    
+                <% } %>
+            </table>
+        </div>
+    </main>
+    <footer id="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+</html>

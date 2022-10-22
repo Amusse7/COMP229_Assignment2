@@ -1,0 +1,195 @@
+/*
+	Filename: style.css
+	Name: Abdulkadir Musse
+	Student ID: 300988847
+	Date: 2022-09-30
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+html, body{padding:0;margin:0;overflow-x:hidden;}
+body{font-family:'Noto Sans',sans-serif;background:url('/public/images/bg.png');background-size:cover;background-attachment: fixed;color:black; min-height: 100vh; display: flex; justify-content: space-between; flex-direction: column;}
+*{box-sizing:border-box;}
+
+a{color:unset;text-decoration: none;}
+p{font-size:16px;line-height:160%;}
+
+.logo{max-width:60px;}
+.logo img{max-width:100%;height:auto;}
+
+.shadow-center{box-shadow:
+    0 1.1px 2.2px rgba(0, 0, 0, 0.011),
+    0 2.7px 5.3px rgba(0, 0, 0, 0.016),
+    0 5px 10px rgba(0, 0, 0, 0.02),
+    0 8.9px 17.9px rgba(0, 0, 0, 0.024),
+    0 16.7px 33.4px rgba(0, 0, 0, 0.029),
+    0 40px 80px rgba(0, 0, 0, 0.04)
+  ;  
+}
+
+.shadow-center-strong{
+    box-shadow:
+    0 0px 39.5px rgba(0, 0, 0, 0.009),
+    0 0px 68.2px rgba(0, 0, 0, 0.013),
+    0 0px 89.6px rgba(0, 0, 0, 0.017),
+    0 0px 113.8px rgba(0, 0, 0, 0.021),
+    0 0px 208px rgba(0, 0, 0, 0.03)
+  ;
+}
+
+.button{display:inline-block;transition:background-color 0.4s;padding:15px 20px;font-size:14px;background:rgba(0,0,0,0.1);color:black;border-radius:5px;margin:20px 0;max-width:150px;text-align:center;border:none;outline:none;}
+.button:hover{background:rgba(0,0,0,0.2);}
+
+section .caption{font-size:38px;margin-top:20px;}
+
+.contact-table{border-collapse: collapse;overflow:hidden;border-radius:10px;}
+.contact-table td{padding:15px;min-width:120px;background:rgba(255,255,255,0.2);}
+
+.image-card-1{position:relative;max-width:370px;min-width:300px;background:#fff;color:#000;border:4px solid #5499C7;}
+.image-card-1 .image{position:relative;width:100%; border-bottom: 2px solid #EEE; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+.image-card-1 img{width:100%;height:auto;max-height:300px;margin-left:-0.2px;}
+.image-card-1 .content{}
+.image-card-1 .content p{margin:10px 0;padding:20px 20px;}
+.image-card-1 .title{position:relative;color:black;font-size:24px;padding:20px;padding-bottom:0;margin:0;}
+.image-card-1 .nav{border-top:1px solid #ddd;padding:15px 20px;}
+.image-card-1 .nav a{color:rgb(144, 148, 144);display:inline-block;vertical-align:bottom;text-transform:uppercase;text-decoration:none;transition:color 0.3s;}
+.image-card-1 .nav a:not(:first-of-type){margin:0 10px;}
+.image-card-1 .nav a:hover{color:#000;}
+
+
+#header{width:100%;background:white;}
+#header .inner{padding:10px 20px;display:flex;align-items: center}
+#header .nav-container{display:inline-block;margin:0 0 0 auto;text-align:center;}
+#header .nav-container .fas{font-size:22px;margin-right:10px;position:relative;top:4px;}
+#header nav a{margin:0 15px;}
+#header nav a:hover{color:#5499C7;}
+
+#footer{width:100%;padding:10px 20px;color:#fff;background:#5499C7;}
+#footer .copyright{text-align:center;margin:0 auto;}
+
+@media (max-width: 700px) 
+{
+  #header .inner{display:block;text-align:center;}
+  #header .logo{margin:0 auto;margin-bottom:15px;}
+  #header nav a{display:block;width:100%;padding:15px;margin:0;}
+  .col-left, .col-right { width: 100% !important; }
+  .services .content { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 1200px) 
+{
+  .section-projects .cards-container{display:block !important;text-align:center;}
+  .section-projects .image-card-1{display:block;margin:50px auto !important;}
+}
+
+main{padding:20px;}
+
+.welcome-message{background:#fff;max-width:700px;margin:50px auto;min-width:330px;color:black;padding:5px 20px;border-radius:10px;}
+.welcome-message .title{font-size:34px;color:#5499C7;}
+.quote{margin:50px auto;max-width:700px;background: #fbfbfb;padding: 1em;border-radius: 1em;border:1px solid green;}
+.quote figcaption,
+.quote blockquote{margin: 1em;}
+
+.aboutme{border-radius:10px;color:#000;max-width:1000px;padding:20px;background:#fff;margin:50px auto;}
+.aboutme .picture{max-width:250px;height:auto;border-radius:10px;}
+.aboutme .description{margin:40px 0;max-width:700px;}
+.aboutme .title{font-size:42px;}
+
+.projects{padding:20px 20px;}
+.projects .section-title{text-align:center;margin:0 0 50px 0;font-size:32px;color:#5499C7;}
+.projects .cards-container{display:flex;justify-content: center;flex-wrap: wrap;justify-content: center;}
+.projects .image-card-1{margin:0 25px; margin-bottom: 20px; border-radius: 10px;}
+
+.services{max-width:1300px;margin:20px auto;text-align:center;}
+.services .content {  display: grid; grid-template-columns: minmax(270px, 1fr) minmax(270px, 1fr); width: 100%; gap: 25px; }
+.services .col-left{display:inline-block;vertical-align:top;max-width:45%;margin:0 30px;}
+.services .col-right{display:inline-block;vertical-align:top;max-width:45%;margin:0 30px;}
+.services .section-title{font-size:48px;margin-bottom:40px;color:#5499C7;}
+.services .service { width:100%;color:black;text-align:left; border-radius: 10px; overflow: hidden; }
+.services .service .trigger{background:#5499C7;width:100%;padding:20px;margin:0;}
+.services .service .service-content{background:white;width:100%;padding:20px; min-height:90px;}
+.services .service .service-content p { margin: 0; }
+.services .service .service-content:not(:first-of-type){display:none;}
+
+.contact{max-width:1000px;padding:20px;margin:50px auto;border-radius:10px;background:#fff;color:#000;}
+.contactform{max-width:1000px;padding:20px;margin:50px auto;border-radius:10px;background:#fff;color:#000;}
+.contactform .textbox{border:2px solid #5499C7;display:block;border-radius:5px;max-width:360px;min-width:300px;margin:10px 0;padding:15px;outline:none;transition:all 0.3s;font-size:16px;font-weight:bold;color:#444;font-family:'Noto Sans',sans-serif;}
+.contactform .textbox:focus{background:#5499C7;color:white;}
+
+#login-form {
+  background:white;
+  color:black;
+  padding:40px;
+  max-width:500px;
+  margin:85px auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+form a {
+  display: block;
+  text-align: center;
+  color: rgb(113, 187, 255);
+}
+
+form a:hover {
+  color: rgb(46, 142, 231);
+}
+
+.action-btn {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.textbox{border:2px solid #5499C7;display:block;border-radius:5px;max-width:360px;min-width:300px;margin:10px 0;padding:15px;outline:none;transition:all 0.3s;font-size:16px;font-weight:bold;color:#444;font-family:'Noto Sans',sans-serif;}
+
+#login-form h1 {
+  font-size:42px;
+}
+
+#login-form .submission {
+  display:flex;
+  align-items: center;
+}
+
+#login-form .button {
+  margin-right:15px;
+}
+
+.center-con {
+  max-width:1000px;
+  background:white;
+  padding:40px;
+  margin:30px auto;
+  border-radius: 10px;
+}
+
+#contact-list .top {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:-20px;
+  padding-bottom:10px;
+  border-bottom:2px solid #ddd;
+  margin-bottom:20px;
+}
+
+#contact-list {
+  width: 700px;
+  border-radius: 10px;
+}
+
+#contact-list table {
+  width:100%;
+}
+
+#contact-list table td {
+  color:#5499C7;
+  text-align: center;
+}
